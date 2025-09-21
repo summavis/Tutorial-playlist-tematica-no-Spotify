@@ -51,7 +51,7 @@ const slides = [
         </div>
     </div>`
 ];
-
+3
 //Sistema de controle dos Slides
 let slideAtual = 0;
 
