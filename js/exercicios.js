@@ -1,9 +1,11 @@
+//Requisição no github para buscar os repositórios de framework Javascript mais bem votados
 async function buscarFrameworksGitHub() {
   try {
     const resposta = await fetch("https://api.github.com/search/repositories?q=framework+language:JavaScript&sort=stars&order=desc&per_page=3");
     const dados = await resposta.json();
     const opcoes = dados.items.map(repo => repo.name);
 
+    //retorna a pergunta e os dados coletados com a requisição e avisa erro caso falhe
     return {
       id: "ex3",
       tipo: "combobox",
@@ -17,9 +19,11 @@ async function buscarFrameworksGitHub() {
   }
 }
 
+//Carrega os exercicios inclusive o com requisição ao Github
 async function carregarExercicios() {
   const exercicioAPI = await buscarFrameworksGitHub();
 
+  // cria o restante dos exercícios sem requisição externa em formato JSON para facilitar o acesso aos dados da próxima função
   const exercicios = [
     {
       id: "ex1",
@@ -52,20 +56,26 @@ async function carregarExercicios() {
   return exercicios;
 }
 
+
+//inicializa o Quizz
 async function initQuiz() {
   const exercicios = await carregarExercicios();
 
+  //insere os exercicios dinamicamente na pagina (facilitando no caso de precisar adicionar novos exercicios)
   exercicios.forEach(ex => {
     const container = document.getElementById(ex.id);
     if (!container) return;    
     container.classList.add("exercicio");
 
+    //leitura dos dados resgatados e fornecidos anteriormente
     let estado = JSON.parse(localStorage.getItem(ex.id)) || { tentativas: 0, concluido: false };
 
     const perguntaEl = document.createElement("h3");
     perguntaEl.textContent = ex.pergunta;
     container.appendChild(perguntaEl);
 
+
+    //criação dinamica do exercicios de 3 tipos diferentes
     if (ex.tipo === "escolhaUnica" || ex.tipo === "multiplaEscolha") {
       ex.opcoes.forEach((op, i) => {
         const label = document.createElement("label");
@@ -103,7 +113,7 @@ async function initQuiz() {
     feedback.classList.add("feedback");
     container.appendChild(feedback);
 
-    // Div para tentativas (inicialmente vazia)
+    // Div para tentativas
     const tentativasEl = document.createElement("div");
     tentativasEl.id = ex.id + "_tentativas";
     tentativasEl.classList.add("tentativas");
@@ -114,6 +124,7 @@ async function initQuiz() {
   checarPontuacao();
 }
 
+//Faz a verificação das respostas
 function verificarResposta(ex) {
   let selecionados = [];
 
@@ -127,6 +138,7 @@ function verificarResposta(ex) {
     selecionados.push(parseInt(select.value));
   }
 
+  //le os dados em JSON para verificar se a questão esta correta
   let estado = JSON.parse(localStorage.getItem(ex.id)) || { tentativas: 0, concluido: false, acertou: false };
   if (estado.concluido) return;
 
@@ -135,12 +147,15 @@ function verificarResposta(ex) {
   const feedback = document.getElementById(ex.id + "_feedback");
   const tentativasEl = document.getElementById(ex.id + "_tentativas");
 
+  //revela os elementos escondidos
   feedback.style.display = "block";
   tentativasEl.style.display = "block";
 
+  //verifica acerto
   const acertou = selecionados.length === ex.correta.length &&
                   ex.correta.every(val => selecionados.includes(val));
 
+  //resposta visual para o usuário sobre o acerto ou erro respeitando as 3 vezes de limite de erro antes de bloquear a questão
   if (acertou) {
     feedback.textContent = "✅ Correto! Parabéns!";
     estado.concluido = true;
@@ -157,13 +172,12 @@ function verificarResposta(ex) {
     estado.acertou = false;
   }
 
+  //registro no localstorage para gravar as respostas e as tentativas
   localStorage.setItem(ex.id, JSON.stringify(estado));
   checarPontuacao();
 }
 
-
-initQuiz();
-
+//Checa as pontuações de dos execicios
 function checarPontuacao() {
   const exerciciosIds = ["ex1", "ex2", "ex3"];
   let acertos = 0;
@@ -174,7 +188,7 @@ function checarPontuacao() {
       acertos++;
     }
   });
-
+  
   if (exerciciosIds.every(id => {
     const estado = JSON.parse(localStorage.getItem(id));
     return estado && estado.concluido;
@@ -183,8 +197,7 @@ function checarPontuacao() {
   }
 }
 
-
-
+//revela o popup com a pontuação
 function mostrarPopupPontuacao(acertos, total) {
   const popup = document.getElementById("popup-pontuacao");
   const texto = document.getElementById("pontuacao-texto");
@@ -196,3 +209,7 @@ function mostrarPopupPontuacao(acertos, total) {
     popup.style.display = "none";
   };
 }
+
+
+//inicializa o quizz
+initQuiz();

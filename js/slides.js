@@ -71,7 +71,7 @@ function mostrarSlide(index) {
         aplicarTema(localStorage.getItem("tema"));
     }, 200);
 
-    // salvar progresso no localStorage
+    // salvar progresso no localStorage para voltar no mesmo slide caso atualize a pagina
     localStorage.setItem("slideAtual", index);
 }
 

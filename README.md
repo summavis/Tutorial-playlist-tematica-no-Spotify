@@ -10,7 +10,7 @@ Escolhas Técnicas
 
 Preferi utilizar JavaScript puro para construir a lógica da aplicação, já que me sinto mais à vontade e independente programando sem bibliotecas externas. Com essa escolha, consegui desenvolver todas as funções pensadas, desde o gerenciamento das perguntas do quiz até a animação dos elementos interativos, sem inflar o projeto com dependências extras.
 
-O HTML e CSS foram organizados para viabilizar design responsivo, assegurando que a aplicação rodasse bem em diversos tamanhos de tela.
+O HTML e CSS foram organizados para viabilizar design responsivo, assegurando que a aplicação seja compatível com diversos tamanhos de tela.
 
 Emprego de IA
 

@@ -39,6 +39,7 @@ function aplicarTema(tema) {
     body.classList.remove("tema-claro");
     if (botao) botao.innerHTML = '<a id="btn-tema" class="btn-tema"><img src="./imgs/buttons/button_temaescuro.svg">';
     document.querySelectorAll("img.personagem").forEach(img => {
+      //adicionar sulfixo no nome da imagem para trocar para a personagem modo claro/modo escuro
       const baseSrc = img.getAttribute("src").replace("_modoclaro", "");
       img.src = baseSrc;
     });
