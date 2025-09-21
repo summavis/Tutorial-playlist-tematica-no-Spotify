@@ -9,7 +9,7 @@ async function buscarFrameworksGitHub() {
     return {
       id: "ex3",
       tipo: "combobox",
-      pergunta: "Qual desses é o repositório com mais estrelas no Github?",
+      pergunta: "Qual desses repositórios é de um framework JavaScript com mais estrelas no GitHub?",
       opcoes,
       correta: [0]
     };
