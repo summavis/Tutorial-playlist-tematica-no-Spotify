@@ -1,6 +1,6 @@
 //Slides dinâmicos deixando apenas o essencial na página
 const slides = [
-    `<section class="hero">
+    `<div class="content">
       <img class="personagem" src="./imgs/personagem/personagem_explicando.svg">
       <div>
         <h1>Passo 1: Defina o tema da playlist</h1>
@@ -12,8 +12,8 @@ const slides = [
         <br>Uma viagem de carro cantando desafinado?</p>
         <p><b>Decidiu? Então vamos para o próximo passo.</b></p>
       </div>
-    </section>`,
-    `<section class="hero">
+    </div>`,
+    `<div class="content">
         <img class="telaexemplo" alt="guia botões criar playlist" src="./imgs/exemplos/tela1_spotify.png">
         <img class="personagem sobrepor" src="./imgs/personagem/personagem_sentada.svg">
         <div>
@@ -29,8 +29,8 @@ const slides = [
             </div>
             <p><br><b>Tudo bem até aqui? Então vamos para o próximo passo.</b></p>
         </div>
-    </section>`,
-    `<section class="hero">
+    </div>`,
+    `<div class="content">
         <img class="telaexemplo" alt="guia botões criar playlist" src="./imgs/exemplos/tela3_spotify.png">
         <img class="personagem sobrepor" src="./imgs/personagem/personagem_sentada.svg">
         <div>
@@ -39,8 +39,8 @@ const slides = [
             <p></p>
             <p><br><b>Tenho certeza que sua playlist está demais, vamos para as ultimas informções?</b></p>
         </div>
-    </section>`,
-    `<section class="hero">
+    </div>`,
+    `<div class="content">
         <img class="telaexemplo" alt="guia botões criar playlist" src="./imgs/exemplos/tela4_spotify.png">
         <img class="personagem sobrepor" src="./imgs/personagem/personagem_sentada.svg">
         <div>
@@ -49,7 +49,7 @@ const slides = [
             <p><b>Na área em azul</b>, dá para <b>adicionar</b> mais músicas, <b>reorganizar ou remover</b> algumas, <b>classificar</b> por título, artista, álbum ou data de adição, <b>trocar o nome e a descrição</b> da playlist, e tem o mixer, mas ja é uma opção mais avançada e fica para outro tutorial.</p>
             <p><b>Agora que você aprendeu tudo sobre como criar uma playlist temática, que tal uns exercícios para gravar o conteúdo?</b></p>
         </div>
-    </section>`
+    </div>`
 ];
 
 //Sistema de controle dos Slides

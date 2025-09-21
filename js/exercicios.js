@@ -58,7 +58,7 @@ async function initQuiz() {
   exercicios.forEach(ex => {
     const container = document.getElementById(ex.id);
     if (!container) return;    
-    container.classList.add("ex");
+    container.classList.add("exercicio");
 
     let estado = JSON.parse(localStorage.getItem(ex.id)) || { tentativas: 0, concluido: false };
 
