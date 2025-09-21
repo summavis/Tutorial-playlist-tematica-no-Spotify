@@ -1,33 +1,25 @@
-# Tutorial de criação de playlist temática no Spotify
+Jornada de Criação
 
-Desenvolvimento de um tutorial minimalista e explicativo para jovens entre 16 e 24 anos, direto, envolvente e de fácil navegação.
+A escolha do tema da aplicação foi o pontapé inicial da minha jornada criativa. Ao analisar o público-alvo, notei que inserir um personagem deixaria o conteúdo mais leve e acessível, estreitando o relacionamento do usuário com a experiência.
 
-O projeto pode ser hospedado no **GitHub Pages**, **Vercel** ou **Netlify**. Basta fazer o deploy da pasta.
+Desde o começo, almejei um design direto, fácil de usar e autoexplicativo, orientando o usuário com uma combinação de textos concisos e elementos visuais. A meta era que qualquer pessoa, sem importar seu conhecimento técnico, conseguisse seguir os passos e montar sua playlist temática sem dificuldades.
 
-- **Paleta de cores:**
-  - Cor primária: `#1E3A8A`
-  - Cor de destaque: `#34D399`
-  - Cor de texto: `#D1D5DB`
-- Layout minimalista, foco em leitura e contraste
-- Responsivo para desktop, tablet e mobile
+Também pedi para algumas pessoas na faixa etária analisarem o tutorial e me darem um feedback se está coerente, funcional e bonito.
 
-## Exercícios
-- **Escolha Única:** pergunta com alternativas de rádio
-- **Múltipla Escolha:** pergunta com checkboxes
-- **Combobox:** pergunta com menu suspenso e com requisição API.
+Escolhas Técnicas
 
-### 🔁 Lógica de Tentativas e Feedback
-- Máximo de 3 tentativas por questão
-- Feedback exibido após cada tentativa
-- Ao acertar ou esgotar tentativas, botão é desativado
-- Estado persistido no `localStorage` para restaurar progresso ao recarregar
+Preferi utilizar JavaScript puro para construir a lógica da aplicação, já que me sinto mais à vontade e independente programando sem bibliotecas externas. Com essa escolha, consegui desenvolver todas as funções pensadas, desde o gerenciamento das perguntas do quiz até a animação dos elementos interativos, sem inflar o projeto com dependências extras.
 
-## ⚙️ Tecnologias Usadas
-- **HTML5** (semântico)
-- **CSS3** (Flexbox e responsividade)
-- **JavaScript Vanilla** (DOM, eventos, localStorage)
+O HTML e CSS foram organizados para viabilizar design responsivo, assegurando que a aplicação rodasse bem em diversos tamanhos de tela.
 
-## 🤖 Uso de IA
-Utilizei ChatGPT para auxiliar na geração de conteúdo para o tutorial.
+Emprego de IA
+
+Empreguei ferramentas de Inteligência Artificial como auxílio na elaboração do conteúdo textual. A IA serviu só como um guia, ajudando na revisão e no refinamento das explicações e instruções, mas todas as decisões finais foram tomadas manualmente, garantindo que o texto permanecesse claro, direto e coerente com a proposta do projeto.
+
+Obstáculos
+
+O maior obstáculo foi criar uma animação para o personagem sem “poluir” o código com inúmeras linhas de SVG. Após algumas pesquisas, descobri que era possível animar diretamente dentro do arquivo SVG, mantendo o código limpo e, ao mesmo tempo, adicionando um toque visual único à aplicação.
+
+Essa solução não só resolveu o problema técnico, mas também promoveu uma experiência mais cativante para o usuário, preservando a aplicação organizada, eficiente e leve.
 
 
