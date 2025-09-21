@@ -3,13 +3,13 @@ async function buscarFrameworksGitHub() {
   try {
     const resposta = await fetch("https://api.github.com/search/repositories?q=framework+language:JavaScript&sort=stars&order=desc&per_page=3");
     const dados = await resposta.json();
-    const opcoes = dados.items.map(repo => repo.name);
+    const opcoes = dados.items.map(repo => repo.full_name);
 
     //retorna a pergunta e os dados coletados com a requisição e avisa erro caso falhe
     return {
       id: "ex3",
       tipo: "combobox",
-      pergunta: "Qual desses é um framework front-end mais famoso no Github?",
+      pergunta: "Qual desses é o repositório com mais estrelas no Github?",
       opcoes,
       correta: [0]
     };
@@ -188,7 +188,7 @@ function checarPontuacao() {
       acertos++;
     }
   });
-  
+
   if (exerciciosIds.every(id => {
     const estado = JSON.parse(localStorage.getItem(id));
     return estado && estado.concluido;
