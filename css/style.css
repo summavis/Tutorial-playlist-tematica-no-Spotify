@@ -287,16 +287,101 @@ footer a:hover {
 }
 
 .ex .btn {
-  margin-top: auto;
+    margin-top: auto;
 }
 
-.ex select{
+.ex select {
     border-radius: 30px;
     width: 50%;
-    padding: 2% 5% 2% 5%; 
+    padding: 2% 5% 2% 5%;
 }
 
 .tentativas,
 .feedback {
     display: none;
+}
+
+/* Estilos para telas menores que 1200px */
+@media (max-width: 1000px) {
+    body {
+        height: fit-content;
+        min-height: 100vh;
+    }
+
+    header p,
+    header ul,
+    header li {
+        padding: 0;
+        margin: 0;
+    }
+
+    main,
+    section {
+        height: fit-content;
+        max-height: none;
+        max-width: 100vw;
+    }
+
+    main section.hero {
+        flex-direction: column;
+        max-width: 95vw;
+        width: 95vw;
+    }
+
+    main section.hero,
+    main section.hero div {
+        padding: 0;
+    }
+
+    footer {
+        top: auto;
+    }
+
+    footer p {
+        width: 95vw;
+    }
+
+    .personagem {
+        max-height: 30vh;
+        margin-bottom: 5vh;
+    }
+
+    #slides-container {
+        width: 95vw;
+        padding: 0;
+        max-height: fit-content;
+    }
+
+    .slides-controles {
+        margin: 5vh 1vw;
+    }
+
+    .telaexemplo {
+        margin-bottom: 2vh;
+    }
+
+    .personagem.sobrepor {
+        top: 25vh;
+        bottom: auto;
+    }
+
+    .exercicios {
+        flex-direction: column;
+        max-width: 95vw;
+        height: fit-content;
+        gap: 5vh;
+    }
+
+    .ex {
+        width: 100%;
+    }
+
+    .ex .btn{
+        margin: 1vh 0;
+    }
+
+    .popup-conteudo {
+        width: 90vw;
+        padding: 5vh 1vw;
+    }
 }
