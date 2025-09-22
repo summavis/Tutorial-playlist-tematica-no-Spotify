@@ -75,7 +75,6 @@ function mostrarSlide(index) {
     localStorage.setItem("slideAtual", index);
 }
 
-// --- PRÉ-CARREGAMENTO DAS IMAGENS ---
 const imagensParaPrecarregar = [
     "./imgs/exemplos/tela3_spotify.png",
     "./imgs/exemplos/tela4_spotify.png",
@@ -89,6 +88,7 @@ const imagensParaPrecarregar = [
     "./imgs/buttons/button_temaclaro.svg"
 ];
 
+// preload das imagens
 function preCarregarImagens(lista) {
     return Promise.all(
         lista.map(src => new Promise(resolve => {
