@@ -12,9 +12,9 @@ Preferi utilizar JavaScript puro para construir a lógica da aplicação, já qu
 
 O HTML e CSS foram organizados para viabilizar design responsivo, assegurando que a aplicação seja compatível com diversos tamanhos de tela.
 
-Emprego de IA
+Uso de IA
 
-Empreguei ferramentas de Inteligência Artificial como auxílio na elaboração do conteúdo textual. A IA serviu só como um guia, ajudando na revisão e no refinamento das explicações e instruções, mas todas as decisões finais foram tomadas manualmente, garantindo que o texto permanecesse claro, direto e coerente com a proposta do projeto.
+Utilizei ferramentas de Inteligência Artificial como auxílio na elaboração do conteúdo textual. A IA serviu só como um guia, ajudando na revisão e no refinamento das explicações e instruções, mas todas as decisões finais foram tomadas manualmente, garantindo que o texto permanecesse claro, direto e coerente com a proposta do projeto.
 
 Obstáculos
 
