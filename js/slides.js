@@ -63,7 +63,7 @@ function mostrarSlide(index) {
         container.innerHTML = slides[index];
         container.classList.add("mostrar");
         document.getElementById("btn-prev").style.opacity = index === 0 ? 0 : 1;
-        document.getElementById("btn-next").textContent = index === slides.length - 1 ? "Finalizar" : "Próximo";    
+        document.getElementById("btn-next").textContent = index === slides.length - 1 ? "Finalizar" : "Próximo";
     }, 200);
 
     // reaplicar tema
@@ -75,12 +75,43 @@ function mostrarSlide(index) {
     localStorage.setItem("slideAtual", index);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+// --- PRÉ-CARREGAMENTO DAS IMAGENS ---
+const imagensParaPrecarregar = [
+    "./imgs/exemplos/tela3_spotify.png",
+    "./imgs/exemplos/tela4_spotify.png",
+    "./imgs/exemplos/tela1_spotify.png",
+    "./imgs/exemplos/tela2_spotify.png",
+    "./imgs/personagem/personagem_explicando_modoclaro.svg",
+    "./imgs/personagem/personagem_explicando.svg",
+    "./imgs/personagem/personagem_sentada_modoclaro.svg",
+    "./imgs/personagem/personagem_sentada.svg",
+    "./imgs/buttons/button_temaescuro.svg",
+    "./imgs/buttons/button_temaclaro.svg"
+];
+
+function preCarregarImagens(lista) {
+    return Promise.all(
+        lista.map(src => new Promise(resolve => {
+            const img = new Image();
+            img.onload = resolve;
+            img.onerror = resolve;
+            img.src = src;
+        }))
+    );
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    // mostra loading até terminar de carregar imagens
+    await preCarregarImagens(imagensParaPrecarregar);
+
     // recuperar progresso
     const progressoSalvo = localStorage.getItem("slideAtual");
     slideAtual = progressoSalvo ? parseInt(progressoSalvo) : 0;
 
+    // esconde loading e mostra slides
+    document.getElementById("loading").style.display = "none";
     mostrarSlide(slideAtual);
+
 
     document.getElementById("btn-prev").addEventListener("click", () => {
         if (slideAtual > 0) {
