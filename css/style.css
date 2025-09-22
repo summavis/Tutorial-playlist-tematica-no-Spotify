@@ -79,13 +79,15 @@ ul {
     font-weight: bold;
 }
 
-.hero, .content {
+.hero,
+.content {
     display: flex;
     flex-direction: row;
     max-width: 45vw;
 }
 
-.hero>div, .content>div {
+.hero>div,
+.content>div {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -341,6 +343,15 @@ footer a:hover {
 
     footer p {
         width: 95vw;
+    }
+
+    a#btn-tema {
+        padding: 0 1vh;
+    }
+
+    .btn-tema img {
+        max-height: 6vh;
+        max-width: 100%;
     }
 
     .personagem {

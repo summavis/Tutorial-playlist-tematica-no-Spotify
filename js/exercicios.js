@@ -162,7 +162,7 @@ function verificarResposta(ex) {
     estado.acertou = true;
     tentativasEl.textContent = "";
   } else if (estado.tentativas >= 3) {
-    feedback.textContent = `❌ Número máximo de tentativas atingido. Resposta correta: ${ex.opcoes.filter((_, i) => ex.correta.includes(i)).join(", ")}`;
+    feedback.innerHTML = `❌ Número máximo de tentativas atingido. <br><b>Resposta correta: ${ex.opcoes.filter((_, i) => ex.correta.includes(i)).join(", ")}</b>`;
     estado.concluido = true;
     estado.acertou = false;
     tentativasEl.textContent = "";

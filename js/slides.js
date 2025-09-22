@@ -4,7 +4,7 @@ const slides = [
       <img class="personagem" src="./imgs/personagem/personagem_explicando.svg">
       <div>
         <h1>Passo 1: Defina o tema da playlist</h1>
-        <p>Primeiramente vamos pensar em um qual vai ser o tema dessa playlist.</p>
+        <p>Primeiramente vamos pensar em qual vai ser o tema dessa playlist.</p>
         <p><b>Sua playlist vai ser trilha sonora de quê?</b>
         <br>Uma festa na sala?
         <br>Um dia chuvoso com café?
@@ -22,7 +22,7 @@ const slides = [
             <div class="coluna">
                 <img alt="guia botões criar playlist" src="./imgs/exemplos/tela2_spotify.png">
                 <div>
-                    <p> Eu escolhi <b>"Minha Playslist :)"</b>, mas você pode colocar qualquer coisa que combine com o tema que escolheu</p>
+                    <p> Eu escolhi <b>"Minha Playslist :)"</b>, mas você pode colocar qualquer nome que combine com o tema que escolheu</p>
                     <br>
                     <p> Depois que escolher, basta clicar no botão <b>"Criar"</b>.
                 </div>            
@@ -37,7 +37,7 @@ const slides = [
             <h1>Passo 3: Adicione as músicas na playlist</h1>      
             <p>Clique no botão <b>"+ Adicionar a esta playlist"</b> e depois utilize a busca para encontrar as músicas que quer adicionar usando o nome da música ou o nome do artista/banda.</p>  
             <p></p>
-            <p><br><b>Tenho certeza que sua playlist está demais, vamos para as ultimas informções?</b></p>
+            <p><br><b>Tenho certeza que sua playlist está demais, vamos para as últimas informções?</b></p>
         </div>
     </div>`,
     `<div class="content">
@@ -46,7 +46,7 @@ const slides = [
         <div>
             <h1>Passo 4: Gerenciar e compartilhar</h1>            
             <p><b>Na área destacada em verde</b> na imagem, você tem os botões para <b>baixar todas as músicas no aparelho</b> e ouvir até no meio do nada, sem internet. E se quiser mostrar seu bom gosto musical, tem também os botões para <b>compartilhar a playlist</b> com os amigos.</p>  
-            <p><b>Na área em azul</b>, dá para <b>adicionar</b> mais músicas, <b>reorganizar ou remover</b> algumas, <b>classificar</b> por título, artista, álbum ou data de adição, <b>trocar o nome e a descrição</b> da playlist, e tem o mixer, mas ja é uma opção mais avançada e fica para outro tutorial.</p>
+            <p><b>Na área em azul</b>, é possível <b>adicionar</b> mais músicas, <b>reorganizar ou remover</b> algumas, <b>classificar</b> por título, artista, álbum ou pela data que foi adicionada, além de <b>trocar o nome e a descrição</b> da playlist. Também há a opção do mixer, mas ela é mais avançada e ficará para outro tutorial.</p>
             <p><b>Agora que você aprendeu tudo sobre como criar uma playlist temática, que tal uns exercícios para gravar o conteúdo?</b></p>
         </div>
     </div>`
