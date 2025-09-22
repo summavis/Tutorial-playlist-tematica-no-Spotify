@@ -4,7 +4,7 @@ const slides = [
       <img class="personagem" src="./imgs/personagem/personagem_explicando.svg">
       <div>
         <h1>Passo 1: Defina o tema da playlist</h1>
-        <p>Primeiramente vamos pensar em qual vai ser o tema dessa playlist.</p>
+        <p>Primeiramente, vamos pensar em qual vai ser o tema dessa playlist.</p>
         <p><b>Sua playlist vai ser trilha sonora de quê?</b>
         <br>Uma festa na sala?
         <br>Um dia chuvoso com café?
@@ -22,9 +22,9 @@ const slides = [
             <div class="coluna">
                 <img alt="guia botões criar playlist" src="./imgs/exemplos/tela2_spotify.png">
                 <div>
-                    <p> Eu escolhi <b>"Minha Playslist :)"</b>, mas você pode colocar qualquer nome que combine com o tema que escolheu</p>
+                    <p>Eu escolhi <b>"Minha Playlist :)"</b>, mas você pode colocar qualquer nome que combine com o tema que escolheu.</p>
                     <br>
-                    <p> Depois que escolher, basta clicar no botão <b>"Criar"</b>.
+                    <p>Depois que escolher, basta clicar no botão <b>"Criar".</b>.
                 </div>            
             </div>
             <p><br><b>Tudo bem até aqui? Então vamos para o próximo passo.</b></p>
